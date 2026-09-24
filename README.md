@@ -103,3 +103,7 @@ It starts with `--permission-mode acceptEdits --allowedTools "Bash(umlpy:*)"`: f
 uv sync
 uv run pytest
 ```
+
+## License
+
+MIT, see [LICENSE](LICENSE). This covers the code in this repository only. [unclebob/uml-viewer](https://github.com/unclebob/uml-viewer) is a separate project with its own terms; it is fetched from its own repository at run time, not redistributed here.
