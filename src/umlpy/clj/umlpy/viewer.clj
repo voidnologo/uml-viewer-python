@@ -1,0 +1,12 @@
+(ns umlpy.viewer
+  (:require [uml-viewer.adapters.core :as core]
+            [uml-viewer.domain.log :as log]
+            [umlpy.python-source :as py-source]))
+
+(defn -main [& args]
+  (log/install-exception-log!)
+  (try
+    (apply core/start! py-source/impl args)
+    (catch Throwable t
+      (log/log-exception! t "start!")
+      (System/exit 1))))
